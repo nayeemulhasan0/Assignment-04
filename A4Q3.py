@@ -1,7 +1,9 @@
+#LPP_max
+
 from scipy.optimize import linprog
 
 # Coeffs of the objective function (negative for maximization; normally linprog minimizes)
-c = [-12, -15, -14]
+c = [12, 15, 14]
 
 # Inequality constraints matrix (Ax ≤ b)
 A_ub = [
@@ -18,7 +20,7 @@ b_eq = [100]
 bounds = [(0, None), (0, None), (0, None)]
 
 # Soln
-result = linprog(c, A_ub=A_ub, b_ub=b_ub, A_eq=A_eq, b_eq=b_eq, bounds=bounds, method='highs')
+result = linprog(-c, A_ub=A_ub, b_ub=b_ub, A_eq=A_eq, b_eq=b_eq, bounds=bounds, method='highs')
 
 # results
 if result.success:
