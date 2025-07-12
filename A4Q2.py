@@ -1,3 +1,5 @@
+#LPP_min
+
 import numpy as np
 from scipy.optimize import linprog
 
