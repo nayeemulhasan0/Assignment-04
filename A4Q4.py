@@ -12,7 +12,7 @@ A=np.array([
 
 b=np.array([4000,50,1400])
 
-result=linprog(c,-A,-b,method='highs')
+result=linprog(c,-A,-b,method='simplex')
 
 for i in range(2):
     print(f" food {i+1} : {result.x[i]} unit" )
