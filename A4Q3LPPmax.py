@@ -1,5 +1,3 @@
-#LPP_max
-
 from scipy.optimize import linprog
 
 # Coeffs of the objective function (negative for maximization; normally linprog minimizes)
